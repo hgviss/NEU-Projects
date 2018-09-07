@@ -4,6 +4,7 @@
 # We are looking at blood samples that have been sent through a mass spec 
 # Once we create a single data base (first version) we will look at using ETL and EDA to find insights in the data. 
 # This is practice for learning python and a learning process. 
+# Working with Python 3 and the Anaconda Navigator / Juypter notebook 
 
 # I will look at applying the same code to individual data sheets depending on sample. 
 # This will wait until after I had a chance to talk with DR.M. VISSER who will be the subject matter expert guide.
@@ -24,7 +25,7 @@ for file in glob.glob("*.xls"): # find all files that end in '.xls'
 # if you want to read multiple sheets into a file you have to read each sheet by name. 
 # we use a function to to read every sheet regardless of name and append them all together
 all_data = pd.DataFrame() #creating an empty data frame
-rows = 0
+rows = 0 
 # this loop opens each xls file
 for file in glob.glob("*.xls"): #Using glob to grab all files that end in '.xls'
     xls = pd.ExcelFile(file) #ExcelFile to read in workbooks
